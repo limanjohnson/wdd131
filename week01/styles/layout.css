@@ -1,16 +1,20 @@
 body {
     display:grid;
     height: 100vh;
-    grid-template: auto auto 1fr 20% / auto 1fr auto;
+    grid-template: auto 1fr 20% / auto 1fr auto;
     font-family:Arial, Helvetica, sans-serif;
 }
 
-header {
-    background:lightcoral;
-    padding:2em;
+header{
     grid-column: 1 / 4;
+}
+
+header h1 {
+    background-color:lightcoral;
+    padding:2em;
+    grid-column:1 / 4;
     border-radius:10px;
-    margin-bottom:1em;
+    /* margin-bottom:1em; */
 }
 
 .nav-bar {
@@ -21,7 +25,7 @@ nav ul {
     background-color:lightsteelblue;
     list-style-type: none;
     margin: 0 0 1em 0;
-    padding: 1em;
+    padding: 1em 0 1em 0;
     border-radius:10px;
     display:flex;
     justify-content: space-around;
