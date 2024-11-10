@@ -5,6 +5,12 @@ body {
     grid-template: auto 1fr 20% / 1fr 1fr 33%;
 }
 
+p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
 /****** Header ******/
 
 header {
@@ -19,6 +25,9 @@ header h1 {
     border-radius:10px;
     margin-top:0;
     text-align:center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .title {
@@ -51,6 +60,9 @@ nav ul li {
     color:#C4E49B;
     padding:1em;
     transition-duration:1s;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .nav-menu nav ul li a:hover {
@@ -91,6 +103,9 @@ section.card.about-me h2 {
     align-items: center;
     height: 3em;
     color:#fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 section.card.resources h2 {
@@ -101,6 +116,9 @@ section.card.resources h2 {
     align-items:center;
     height: 3em;
     color:#fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .resource-link a {
@@ -132,6 +150,9 @@ section.card.resources h2 {
 .about-me-content h3 {
     display:grid;
     grid-column: 1 / 4;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 img.utah-flag {
@@ -153,6 +174,9 @@ footer {
     grid-column: 1 / 4;
     padding:2em;
     margin:1em 0 1em 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 footer p {
