@@ -49,7 +49,7 @@ nav ul {
     display:flex;
     justify-content: space-around;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    
+    max-width:1200px;
     margin:auto;
 }
 
