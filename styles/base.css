@@ -1,0 +1,170 @@
+/****** General ******/
+
+body {
+    display:grid;
+    grid-template: auto 1fr 20% / 1fr 1fr 33%;
+}
+
+/****** Header ******/
+
+header {
+    background-color:aliceblue;
+    display:grid;
+    grid-column: 1 / 4;
+}
+
+header h1 {
+    padding:1em;
+    grid-column:1 / 4;
+    border-radius:10px;
+    margin-top:0;
+    text-align:center;
+}
+
+.title {
+    display:grid;
+}
+
+/* Nav menu */
+
+nav {
+    background-color:#052937;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0 0 0em 0;
+    /* padding: 1em 0 1em 0; */
+    display:flex;
+    justify-content: space-around;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+    margin:auto;
+}
+
+nav ul li {
+    display:flex;
+}
+
+.nav-menu nav ul li a {
+    text-decoration:none;
+    color:#C4E49B;
+    padding:1em;
+    transition-duration:1s;
+}
+
+.nav-menu nav ul li a:hover {
+    background-color:#C4E49B;
+    color:#052937;
+}
+
+/****** Main ******/
+
+main {
+    display:grid;
+    grid-column: 1 / 4;
+    margin: 1em 0 0 0;
+    max-width:1200px;
+    margin: 1em auto;
+}
+
+section.card.about-me {
+    display: grid;
+    grid-column: 1 / 3;
+    border: 2px solid black;
+    margin: 0 1em 0 0;
+    padding: 0 0 1em 0;
+    text-align:center;
+}
+
+section.card.resources {
+    grid-column: 3 / 4;
+    border: 2px solid black;
+    padding: 0 0 0 0;
+}
+
+section.card.about-me h2 {
+    background-color: #052937;
+    margin: 0 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    color:#fff;
+}
+
+section.card.resources h2 {
+    background-color:#052937;
+    margin: 0 0 0 0;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height: 3em;
+    color:#fff;
+}
+
+.resource-link a {
+    text-decoration: none;
+}
+
+.about-me-content {
+    display: grid;
+    grid-template: 1fr .25fr 30% / 1fr 1fr 1fr;
+}
+
+.about-me-content p {
+    display:grid;
+    grid-column: 1 / 3;
+    font-size: 1.2em;
+    text-align:left;
+    margin: 1em;
+}
+
+.about-me-content img {
+    display:grid;
+    grid-column: 3 / 4;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+    margin-top: 1em;
+}
+
+.about-me-content h3 {
+    display:grid;
+    grid-column: 1 / 4;
+}
+
+img.utah-flag {
+    grid-column: 1 / 2;
+    width: 50%;
+    margin-left:1em;
+}
+
+p.location {
+    display: grid;
+    grid-column: 2 / 4;
+}
+
+/****** Footer ******/
+
+footer {
+    background-color:#052937;
+    color:#fff;
+    grid-column: 1 / 4;
+    padding:2em;
+    margin:1em 0 1em 0;
+}
+
+footer p {
+    max-width:1200px;
+    margin:auto;
+    text-align:center;
+}
+
+.footer-space {
+    margin: 1em;
+}
+
+.footer-line {
+    margin-bottom:1em;
+}
