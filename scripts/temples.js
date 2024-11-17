@@ -22,11 +22,11 @@ navItem.forEach(link => {
 // check screen size and togle hamburger menu
 function handleResize() {
     if (window.innerWidth >= 651) {
-        navigation.classList.add('open'); // Make the menu visible
-        hamButton.style.display = 'none'; // Hide the hamburger button
+        navigation.classList.add('open');
+        hamButton.style.display = 'none';
     } else {
-        navigation.classList.remove('open'); // Hide the menu
-        hamButton.style.display = 'block'; // Show the hamburger button
+        navigation.classList.remove('open');
+        hamButton.style.display = 'block';
     }
 }
 
