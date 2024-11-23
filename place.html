@@ -30,12 +30,11 @@
     
     <!-- main -->
     <main>
-            <img 
-            srcset="images/south_africa_coast_vertical.webp, 480w"
-            sizes="(max-width: 600px) 480px, 800px" 
-            src="images/south_africa_coast_vertical.webp"
-            alt="South African Coastline"/>
-        <div class="statistics">
+            <picture>
+                <source srcset="images/south_africa_coast_horizontal.webp" media="(min-width: 670px)" max-width="1200" height="auto">
+                <img src="images/south_africa_coast_vertical.webp" alt="South Africa Coastline" width="669" height="auto"/>
+            </picture>
+        <!-- <div class="statistics"> -->
             <div class="data">
                 <h2>Data</h2>
                 <ul class="category">
@@ -75,7 +74,7 @@
                     <li id="windChill"></li>
                 </ul>
             </div>
-        </div>
+        <!-- </div> -->
     </main>
 
     <!-- footer -->
