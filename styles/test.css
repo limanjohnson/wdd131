@@ -1,26 +1,38 @@
-@media screen and (min-width:800px) {
-    * {
+@media screen and (min-width: 670px) {
+    /* General */
+    
+    /* header */
+
+    /* main */
+    
+    main {
         max-width:1200px;
-        margin: 0 auto;
+        height:auto;
+        margin:0 auto;
+        display:grid;
+        grid-template: 20px 20% 20% 20% 20% 20px / 35% 15% 15% 35%
+    }
+
+    picture {
+        grid-area: 1 / 1 / 6 / 5;
+    }
+
+    source {
+        max-width:1200px;
+        height:auto;
     }
 
     .data, .weather {
         background-color: rgb(255, 212, 208, .8);
     }
 
-    .data h2, .weather h2 {
-        background-color: #8998F8;
-    }
-
     .data {
-        position: absolute;
-        Top: 190px;
+        grid-area: 2 / 1 / 4 / 2;
     }
 
     .weather {
-        float: inline-end;
-        position: relative;
-        top: -200px;
+        grid-area: 4 / 4 / 6 / 5;
+        border-top:none;
     }
 
     .weather h2::after {
@@ -36,4 +48,7 @@
     .weather img {
         display:none;
     }
+
+
+    /* footer */
 }
