@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Liam Nell">
+    <meta name="description"
+    content="
+    WDD 131 Dynamic Web Fundamentals
+    Liam Nell
+    The purpose of this page is to practice new principles learned for javascript fucntions.">
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    
+    <!-- Link JS -->
+    <script src="scripts/place.js" defer></script>
+    
+    <title>Places | WDD 131 Dynamic Web Fundamentals</title>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div id="title">
+            <h1>South Africa</h1>
+        </div>
+    </header>
+    
+    <!-- main -->
+    <main>
+            <img 
+            srcset="images/south_africa_coast_vertical.webp, 480w"
+            sizes="(max-width: 600px) 480px, 800px" 
+            src="images/south_africa_coast_vertical.webp"
+            alt="South African Coastline"/>
+        <div class="statistics">
+            <div class="data">
+                <h2>Data</h2>
+                <ul class="category">
+                    <li>Area:</li>
+                    <li>Population</li>
+                    <li>Capital:</li>
+                    <li>Languages:</li>
+                    <li>Currency:</li>
+                    <li>Time Zone:</li>
+                    <li>Calling Code:</li>
+                    <li>Internet TLD:</li>
+                </ul>
+                <ul class="value">
+                    <li>1,221,037 sq km</li>
+                    <li>60.41 million</li>
+                    <li>Cape Town</li>
+                    <li>English</li>
+                    <li>Rands (R)</li>
+                    <li>UTC+2</li>
+                    <li>+27</li>
+                    <li>.za</li>
+                </ul>
+            </div>
+            <div class="weather">
+                <h2>Weather</h2>
+                <img src="images/weather-icon.svg" alt="Weather icon">
+                <ul class="category">
+                    <li>Temperature:</li>
+                    <li>Conditions:</li>
+                    <li>Wind:</li>
+                    <li>Wind Chill:</li>
+                </ul>
+                <ul class="value">
+                    <li>18&#8451;</li>
+                    <li>Partly Cloudy</li>
+                    <li>21 km/h</li>
+                    <li id="windChill"></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <p class="footer-line">
+            <span id="currentyear"></span> <span class="footer-space">&bull;</span> Liam Nell <span class="footer-space">&bull;</span> Utah
+        </p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
