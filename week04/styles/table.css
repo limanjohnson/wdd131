@@ -1,0 +1,23 @@
+body {
+    padding:5px;
+    margin:0 auto;
+}
+
+table {
+    border:1px solid black;
+}
+
+thead {
+    background-color:black;
+    color:white;
+}
+
+tr:nth-child(:not(first)) {
+    background-color:red;
+}
+
+span p {font-size: 1.5rem}
+
+@media only screen and (min-width: 32rem) {
+    span p {font-size: 2rem}
+}
