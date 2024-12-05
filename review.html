@@ -6,12 +6,30 @@
     <meta name="author" content="Liam Nell">
     <meta name="description" content="WDD 131 Dynamic Web Fundamentals Liam Nell This page's purpose is to practice DOM Manipulation.">
 
+    <link rel="stylesheet" href="styles/review.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
     <script src="scripts/review.js" defer></script>
 
     <title>Form Submitted</title>
 </head>
 <body>
-    <h1>Thank you for your submission!</h1>
-    <div id="review-counter"></div>
+     <nav>
+         <h1>Review Form</h1>
+     </nav>
+    <main>
+        <div>
+            <h2>Thank you for your review!</h2>
+        </div>
+        <div id="review-counter"></div>
+    </main>
+     <footer>
+         <p class="footer-line">
+             <span id="currentyear"></span> <span class="footer-space">&bull;</span> Liam Nell <span class="footer-space">&bull;</span> Utah
+         </p>
+         <p>Last Modified: <span id="lastModified"></span></p>
+     </footer>
 </body>
 </html>

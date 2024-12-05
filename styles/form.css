@@ -6,6 +6,20 @@
     font-family: "roboto", sans-serif;
 }
 
+/*Nav*/
+
+nav {
+    margin: 1em auto;
+    color: #FF5722;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 600;
+    max-width:400px;
+    border-radius:10px;
+}
+
+/*Main*/
+
 main {
     max-width: 400px;
     height: auto;
@@ -112,7 +126,7 @@ input:focus, textarea:focus {
     transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out; /* Smooth transition */
 }
 
-select#select_product {
+select#select_product_list {
     background: #4A4A4A; /* Dark Gray */
     color: #FFFFFF; /* White Text */
     border: 1px solid #666666; /* Medium Gray Border */
@@ -124,14 +138,14 @@ select#select_product {
 }
 
 /* Add focus style for the Select Element */
-select#select_product:focus {
+select#select_product_list:focus {
     border-color: #FF5722; /* Orange Border */
     box-shadow: 0 0 5px 2px rgba(255, 87, 34, 0.5); /* Glowing Effect */
     outline: none; /* Removes default browser outline */
 }
 
 /* Optional: Add a dropdown arrow customization (if needed) */
-select#select_product::-ms-expand {
+select#select_product_list::-ms-expand {
     display: none; /* Hides the default arrow in IE/Edge */
 }
 
@@ -139,4 +153,15 @@ select#select_product::-ms-expand {
 option {
     background: #4A4A4A; /* Match the select's background */
     color: #FFFFFF; /* White text for readability */
+}
+
+/*Footer*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    margin: 2em auto;
+    text-align: center;
+    border-top: 1px solid gray;
+    max-width: 650px;
 }
