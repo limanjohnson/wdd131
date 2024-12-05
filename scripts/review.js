@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', ()  => {
-    const reviewCount = localStorage.getItem('reviewCount') || 0;
+    const reviewCount = parseInt(localStorage.getItem('reviewCount')) || 0;
 
     const counterDisplay = document.querySelector('#review-counter');
 
     if(counterDisplay) {
-        counterDisplay.textContent = `You have submitted ${reviewCount} reviews.`;
+        counterDisplay.textContent = reviewCount === 1
+            ? `You have submitted 1 review.`
+            : `You have submitted ${reviewCount} reviews.`;
     }
 });
 
