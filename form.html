@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Liam Nell">
+    <meta name="description" content="
+    WDD 131 Dynamic Web Fundamentals
+    Liam Nell
+    This page's purpose is to practice DOM Manipulation.">
+
+    <link rel="stylesheet" href="styles/form.css">
+
+    <script src="scripts/form.js" defer></script>
+
+    <title>HTML Form Practice</title>
+
+</head>
+<body>
+    <nav>
+
+    </nav>
+    <main>
+        <div class="htmlform">
+            <form action="review.html" method="get">
+                <fieldset>
+                    <legend>Review Form</legend>
+                    <div class="product_selection">
+                        <label for="select_product_list">Select Product:</label>
+                        <select name="select_product" id="select_product_list" required>
+                            <option value="select_a_product" disabled selected>Select a Product...</option>
+                        </select>
+                    </div>
+
+                    <div class="product_rating">
+
+                        <p>Overall Rating:</p>
+
+                        <label for="fivestar">&star;&star;&star;&star;&star;</label>
+                        <input type="radio" id="fivestar" name="rating" value="5" required>
+
+                        <label for="fourstar">&star;&star;&star;&star;</label>
+                        <input type="radio" id="fourstar" name="rating" value="4" required>
+
+                        <label for="threestar">&star;&star;&star;</label>
+                        <input type="radio" id="threestar" name="rating" value="3" required>
+
+                        <label for="twostar">&star;&star;</label>
+                        <input type="radio" id="twostar" name="rating" value="2" required>
+
+                        <label for="onestar">&star;</label>
+                        <input type="radio" id="onestar" name="rating" value="1" required>
+
+                        </div>
+
+                        <div class="install">
+                            <label for="install_date">Date of Installation</label>
+                            <input type="date" id="install_date" name="install_date" required>
+                        </div>
+
+                        <div class="useful">
+                            <p>Which features did you find useful? <br> <i>Select all that apply</i></p>
+                            <label for="durable">Durability</label>
+                            <input type="checkbox" id="durable" name="durable" value="yes">
+                            <label for="ease">Ease of use</label>
+                            <input type="checkbox" id="ease" name="ease" value="yes">
+                            <label for="performance">Performance</label>
+                            <input type="checkbox" id="performance" name="performance" value="yes">
+                            <label for="design">Design</label>
+                            <input type="checkbox" id="design" name="design" value="yes">
+                        </div>
+
+                        <div class="write_review">
+                            <label for="review">Written Review:</label>
+                            <textarea id="review" name="review" placeholder="Enter your review"></textarea>
+                        </div>
+
+                        <div class="user_name">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name">
+                        </div>
+
+                    <button type="submit">Leave Review</button>
+
+                </fieldset>
+            </form>
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+
+
+</body>
+</html>

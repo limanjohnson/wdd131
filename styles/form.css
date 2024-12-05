@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --add-margin-between-elements: 1em;
+    --display-flex: flex;
+    font-family: "roboto", sans-serif;
+}
+
+main {
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.htmlform {
+    background-color: rgb(46 46 46);
+    color: white;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px 20px rgb(0 0 0 / 10%);
+}
+
+legend {
+    padding: 0;
+    color:#FF5722;
+    font-size:1.5em;
+    font-weight:600;
+}
+
+fieldset {
+    display:flex;
+    flex-direction: column;
+    border:none;
+}
+
+.product_selection {
+    margin-top: var(--add-margin-between-elements);
+    display: var(--display-flex);
+    flex-direction: column;
+}
+
+.product_rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: var(--add-margin-between-elements);
+}
+
+.install {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--add-margin-between-elements);
+}
+
+input#install_date {
+    height: 44px;
+}
+
+.useful label,
+.useful input[type="checkbox"] {
+    display: block;
+    margin-bottom: 8px; /* Optional: Add space between each line */
+}
+
+.write_review {
+    display: flex;
+    flex-direction:column;
+    margin-top: var(--add-margin-between-elements);
+}
+
+textarea#review {
+    height: 100px;
+}
+
+.user_name {
+    display: flex;
+    flex-direction: column;
+    height: 44px;
+    margin-top: var(--add-margin-between-elements);
+}
+
+input#name {
+    height: 44px;
+}
+
+button {
+    margin: 1em 0;
+    height: 44px;
+    background-color: #FF5722;
+    color: #FFFFFF;
+    border:none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #E64A19; /* Darker Orange */
+    cursor: pointer; /* Indicates clickability */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+}
+
+input, textarea {
+    background: #4A4A4A;
+    color: #FFFFFF;
+    border: 1px solid #666666;
+    border-radius:5px;
+}
+
+input:focus, textarea:focus {
+    border-color: #FF5722; /* Highlighted Orange Border */
+    outline: none; /* Removes default browser outline */
+    box-shadow: 0 0 5px 2px rgba(255, 87, 34, 0.5); /* Glowing Orange Effect */
+    transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out; /* Smooth transition */
+}
+
+select#select_product {
+    background: #4A4A4A; /* Dark Gray */
+    color: #FFFFFF; /* White Text */
+    border: 1px solid #666666; /* Medium Gray Border */
+    height: 44px; /* Consistent height with inputs */
+    padding: 0 8px; /* Add some padding for text spacing */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Readable font size */
+    appearance: none; /* Removes default browser styling (optional) */
+}
+
+/* Add focus style for the Select Element */
+select#select_product:focus {
+    border-color: #FF5722; /* Orange Border */
+    box-shadow: 0 0 5px 2px rgba(255, 87, 34, 0.5); /* Glowing Effect */
+    outline: none; /* Removes default browser outline */
+}
+
+/* Optional: Add a dropdown arrow customization (if needed) */
+select#select_product::-ms-expand {
+    display: none; /* Hides the default arrow in IE/Edge */
+}
+
+/* For better user experience, ensure the options are readable */
+option {
+    background: #4A4A4A; /* Match the select's background */
+    color: #FFFFFF; /* White text for readability */
+}
