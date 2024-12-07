@@ -11,11 +11,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
+    <script src="scripts/siteplan.js" defer></script>
+
     <title>Site Plan</title>
 </head>
 <body>
     <header>
-        <div>
+        <div class="header-content">
             <h1>Site Plan</h1>
         </div>
     </header>
@@ -51,19 +53,33 @@
             <h1>This is an h1 heading</h1>
             <h2>This is an h2 heading</h2>
             <h3>This is an h3 heading</h3>
-            <p>This is a p tag</p>
+            <p>This is a p tag
+            <br><br>
+            The font that will be used is Funnel Sans, which is a google font. The headings have certain weights and h2 has a border on the bottom to signify the beginning of its section.
+                <br><br>P tags will always have a gray as the background.
+            </p>
         </div>
         <div class="wireframe-mobile">
-            <h2>Wireframe:</h2>
+            <h2>Mobile Wireframe:</h2>
             <img src="images/searchscreen.png" alt="Wireframe">
             <img src="images/savedplaces.png" alt="Wireframe">
             <img src="images/blog.png" alt="Wireframe">
             <img src="images/blogpage.png" alt="Wireframe">
         </div>
+        <div class="wireframe-desktop">
+            <h2>Desktop Wireframe:</h2>
+            <img src="images/searchscreen_desktop.png" alt="Wireframe">
+            <img src="images/savedplaces_desktop.png" alt="Wireframe">
+            <img src="images/blog_desktop.png" alt="Wireframe">
+            <img src="images/blogpage_desktop.png" alt="Wireframe">
+        </div>
 
     </main>
     <footer>
-
+        <p class="footer-line">
+            <span id="currentyear"></span> <span class="footer-space">&bull;</span> Liam Nell <span class="footer-space">&bull;</span> Utah
+        </p>
+        <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
 </body>
 </html>
