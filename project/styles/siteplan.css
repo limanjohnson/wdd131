@@ -24,20 +24,88 @@ header {
 
 main {
     margin-top: 2em;
-    padding: 0 1em 0 2em;
+    padding: 0 1em 0 1em;
 }
 
 /* Component and Section Styles */
+
+h1 {
+    font-size: 3em;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
 
 h2 {
     border-bottom: 2px solid var(--highlight-color);
     padding-bottom: .5em;
     margin-bottom: 1em;
+    font-weight: 600;
 }
 
 p {
     background-color: var(--secondary-accent);
     padding: 1em;
+}
+
+ul {
+    background-color: var(--secondary-accent);
+    padding:1em;
+}
+
+li {
+    list-style: none;
+    font-size:1.1em;
+}
+
+.color-item {
+    display:flex;
+    align-items:center;
+    margin-bottom:0.5em;
+}
+
+.color-item::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right:10px;
+}
+
+.color-item[data-color="background"]::before {
+    background-color: var(--background);
+}
+
+.color-item[data-color="text-color"]::before {
+    background-color: var(--text-color);
+}
+
+.color-item[data-color="primary-accent"]::before {
+    background-color: var(--primary-accent);
+}
+
+.color-item[data-color="secondary-accent"]::before {
+    background-color: var(--secondary-accent);
+    border: 2px solid white;
+}
+
+.color-item[data-color="highlight-color"]::before {
+    background-color: var(--highlight-color);
+}
+
+.wireframe-mobile {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .5fr 1fr;
+    justify-items: center;
+}
+
+.wireframe-mobile h2 {
+    grid-column: 1 / 5;
+}
+
+img {
+    max-width: 110px;
+    height: auto;
 }
 
 /* Section: Additional components and states can be added below this line */
