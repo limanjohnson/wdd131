@@ -4,38 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Liam Nell">
-    <meta name="description" content="A web app which users can use to look up the weather of different locations.">
+    <meta name="description" content="
+    WDD 131 Dynamic Web Fundamentals
+    Liam Nell
+    This page displays a users previous searches
+    ">
 
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="assets/fontawesome/css/all.css">
 
-    <script src="scripts/app.js" defer></script>
+<!--    <script src="scripts/app.js" defer></script>-->
     <script src="scripts/history.js" defer></script>
 
-    <title>Weather Companion</title>
+    <title>History</title>
 </head>
 <body>
     <header>
         <nav class="bottom-nav">
             <a href="index.html"><i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #ffffff;"></i></a>
             <a href="history.html"><i class="fa-solid fa-rectangle-history" style="color: #ffffff;"></i></a>
-            <a></a>
+            <a href="#"></a>
         </nav>
     </header>
     <main>
         <div>
-            <h1>Weather Companion</h1>
-            <i class="fa-regular fa-cloud fa-2xl" style="color: #74C0FC;"></i>
+            <h1>History</h1>
         </div>
-        <div class="search-container">
-            <label for="search-bar"></label>
-            <input type="text" id="search-bar" placeholder="Enter a location name...">
-            <button id="search-button">Seach</button>
-            <div id="search-results"></div>
-        </div>
+        <ul id="history-list"></ul>
     </main>
     <footer>
 
     </footer>
+
 </body>
 </html>

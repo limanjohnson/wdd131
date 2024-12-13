@@ -29,11 +29,18 @@ function displayWeather(data) {
         <p>Temperature: ${data.temperature}°F</p>
         <p>Weather: ${data.weather}</p>
         <p>Humidity: ${data.humidity}%</p>
-        <p>Wind Speed: ${data.windSpeed}m/s</p>
+        <p>Wind Speed: ${data.windSpeed}MPH</p>
     `;
     searchResults.style.color = "#333";
 }
 
+function saveToLocalStorage(data) {
+    let history = JSON.parse(localStorage.getItem('searchHistory') || '[]');
+    if (!history.some(entry => entry.city === data.city)) {
+        history.push(data);
+        localStorage.setItem('searchHistory', JSON.stringify(history));
+    }
+}
 
 // Display Error
 function displayError(message) {
