@@ -5,12 +5,12 @@ const searchResults = document.getElementById('search-results');
 
 // OpenWeatherMap API Configuration
 const API_KEY = '8b15c4423581e3b81a90a3c1acab337a'
-const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather'
+const BASE_URL = 'https://weather-backend-e43n.onrender.com/weather'
 
 // Fetch Weather Data
 async function fetchWeather(location) {
     try {
-        const response = await fetch(`${BASE_URL}?q=${location}&appid=${API_KEY}&units=imperial`);
+        const response = await fetch(`${BASE_URL}?q=${location}&appid=${API_KEY}&units=metric`);
 
         if  (!response.ok) {
             throw new Error('Location not found')
