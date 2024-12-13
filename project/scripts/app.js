@@ -26,7 +26,7 @@ async function fetchWeather(location) {
 function displayWeather(data) {
     searchResults.innerHTML = `
         <h2>${data.city}, ${data.country}</h2>
-        <p>Temperature: ${data.temperature}°C</p>
+        <p>Temperature: ${data.temperature}°F</p>
         <p>Weather: ${data.weather}</p>
         <p>Humidity: ${data.humidity}%</p>
         <p>Wind Speed: ${data.windSpeed}m/s</p>
