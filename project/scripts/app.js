@@ -23,17 +23,17 @@ async function fetchWeather(location) {
     }
 }
 
-// Display Weather Data
 function displayWeather(data) {
-    searchResults.innerHTML =  `
-    <h2>${data.name}, ${data.sys.country}</h2>
-    <p>Temperature: ${data.main.temp}°F</p>
-    <p>Weather: ${data.weather[0].description}</p>
-    <p>Humidity: ${data.main.humidity}%</p>
-    <p>Wind Speed: ${data.wind.speed}m/s</p>
+    searchResults.innerHTML = `
+        <h2>${data.city}, ${data.country}</h2>
+        <p>Temperature: ${data.temperature}°C</p>
+        <p>Weather: ${data.weather}</p>
+        <p>Humidity: ${data.humidity}%</p>
+        <p>Wind Speed: ${data.windSpeed}m/s</p>
     `;
     searchResults.style.color = "#333";
 }
+
 
 // Display Error
 function displayError(message) {
