@@ -10,7 +10,7 @@ const BASE_URL = 'https://weather-backend-e43n.onrender.com/weather'
 // Fetch Weather Data
 async function fetchWeather(location) {
     try {
-        const response = await fetch(`${BASE_URL}?q=${location}&appid=${API_KEY}&units=metric`);
+        const response = await fetch(`${BASE_URL}?q=${location}&appid=${API_KEY}&units=imperial`);
 
         if  (!response.ok) {
             throw new Error('Location not found')
