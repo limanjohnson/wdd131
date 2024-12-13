@@ -1,0 +1,168 @@
+/* ============================================= */
+/* ================ GENERAL RESET ============== */
+/* ============================================= */
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography Defaults */
+html {
+    font-size: 16px; /* Sets the root font size */
+    font-family: 'Arial', sans-serif; /* Default font */
+}
+
+body {
+    line-height: 1.6;
+    background-color: var(--background);
+    color: #333; /* Default text color */
+}
+
+/* Variables */
+:root {
+    --background: #fff;
+    --primary-accent: #87ceeb;
+    --secondary-accent: #f2f2f2;
+    --text-color: #333;
+    --highlight-color: #fffacd;
+}
+
+/* ============================================= */
+/* ================ LAYOUT SECTIONS ============ */
+/* ============================================= */
+
+/* Header Section */
+header {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+header .bottom-nav {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+header .bottom-nav a {
+    background-color: #333;
+    color:#fff;
+    width: 5rem;
+    height:5rem;
+    border: 2px solid white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+
+/* Main Section */
+main {
+    padding: 2rem;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+/* ============================================= */
+/* ================ COMPONENT STYLES =========== */
+/* ============================================= */
+
+/* Navigation */
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #ddd;
+}
+
+/* Buttons */
+button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Search bar */
+input#search-bar {
+    height: 44px;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0 0 0;
+}
+
+button#search-button {
+    margin: 2em 0 0 0;
+    height: 44px;
+}
+
+/* Search Results */
+#search-results {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+#search-results p {
+    margin: 0.5rem 0;
+}
+
+/* ============================================= */
+/* ================== UTILITIES ================ */
+/* ============================================= */
+
+/* Flex Utilities */
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ============================================= */
+/* ================ RESPONSIVE STYLES ========== */
+/* ============================================= */
+
+/* Media query for mobile devices */
