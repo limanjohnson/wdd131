@@ -13,7 +13,8 @@ async function fetchWeather(location) {
 
         if (!response.ok) {
             const errorData = await response.json(); // Handle JSON error responses
-            throw new Error(errorData.error || 'Location not found');
+            displayError(errorData.error || 'Location not found'); // Directly call displayError
+            return; // Exit function as no valid response needs further action
         }
 
         const weatherData = await response.json();
@@ -59,12 +60,28 @@ function displayError(message) {
 }
 
 // Event Listener
-searchButton.addEventListener('click', () => {
+searchButton.addEventListener('click', async () => {
     const location = searchBar.value.trim();
 
     if (location) {
-        fetchWeather(location);
+        try {
+            await fetchWeather(location); // Wait for fetchWeather to complete
+        } catch (error) {
+            console.error(error);
+            displayError('Location not found');
+        }
     } else {
         displayError('Please enter a location');
     }
 })
+
+// Event Listener "enter" key
+searchBar.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        document.getElementById("search-button").click();
+    }
+});
+

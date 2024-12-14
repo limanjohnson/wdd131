@@ -61,9 +61,8 @@ header .bottom-nav a {
 }
 
 main {
+    background: linear-gradient(to bottom, var(--primary-accent), var(--background));
     padding: 2rem;
-    margin: 0 auto;
-    max-width: 800px;
     flex: 1;
 }
 
@@ -72,9 +71,18 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1.5rem 0;
+    margin: 1em 0;
 }
 
 /* Component Styles */
+
+h2 {
+    border-bottom: 2px solid var(--highlight-color);
+    padding-bottom: .5em;
+    margin-bottom: 1em;
+    font-weight: 600;
+}
+
 nav {
     display: flex;
     gap: 1rem;
@@ -89,6 +97,11 @@ nav a {
 
 nav a:hover {
     background-color: #ddd;
+}
+
+main div h1 {
+    max-width:1200px;
+    margin: 0 auto;
 }
 
 button {
@@ -108,7 +121,8 @@ button:hover {
 .search-container {
     display: flex;
     flex-direction: column;
-    margin: 2em 0 0;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 #search-bar, button#search-button {
@@ -122,6 +136,7 @@ button:hover {
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #f9f9f9;
+    height:200px;
 }
 
 #search-results p {
@@ -132,8 +147,10 @@ button:hover {
 li {
     list-style: none;
     margin: 1em 0;
-    border: 1px solid #333;
+    border: 1px solid #ccc;
+    border-radius:4px;
     padding: 1em;
+    background-color:#f9f9f9;
 }
 
 /* Blog Posts Layout */
