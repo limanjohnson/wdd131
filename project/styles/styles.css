@@ -125,6 +125,13 @@ button:hover {
     max-width: 800px;
 }
 
+button#search-button {
+    background-color: #f2f2f2;
+    color: #333;
+    border: 1px solid #ccc;
+    margin-top: 1em;
+}
+
 #search-bar, button#search-button {
     height: 44px;
     margin-top: 1em;
