@@ -4,20 +4,21 @@ const searchBar = document.getElementById('search-bar');
 const searchResults = document.getElementById('search-results');
 
 // OpenWeatherMap API Configuration
-const API_KEY = '8b15c4423581e3b81a90a3c1acab337a'
 const BASE_URL = 'https://weather-backend-e43n.onrender.com/weather'
 
 // Fetch Weather Data
 async function fetchWeather(location) {
     try {
-        const response = await fetch(`${BASE_URL}?q=${location}&appid=${API_KEY}&units=imperial`);
+        const response = await fetch(`${BASE_URL}?q=${location}`); // No API key in the frontend
 
-        if  (!response.ok) {
-            throw new Error('Location not found')
+        if (!response.ok) {
+            const errorData = await response.json(); // Handle JSON error responses
+            throw new Error(errorData.error || 'Location not found');
         }
 
         const weatherData = await response.json();
         displayWeather(weatherData);
+        saveToLocalStorage(weatherData); // Save valid results
     } catch (error) {
         displayError(error.message);
     }
@@ -34,6 +35,7 @@ function displayWeather(data) {
     searchResults.style.color = "#333";
 }
 
+// Save user searches to LocalStorage
 function saveToLocalStorage(data) {
     let history = JSON.parse(localStorage.getItem('searchHistory') || '[]');
     if (!history.some(entry => entry.city === data.city)) {
@@ -58,3 +60,13 @@ searchButton.addEventListener('click', () => {
         displayError('Please enter a location');
     }
 })
+
+// Add a loading message while after users begins search
+function setLoading(isLoading) {
+    if (isLoading) {
+        searchResults.innerHTML = `<p>Loading...</p>`;
+        searchResults.style.color = "#333";
+    } else {
+        searchResults.innerHTML = ''; // clear loading messages upon result load
+    }
+}
