@@ -31,7 +31,7 @@ function displayWeather(data) {
         <p>Temperature: ${data.temperature}°F</p>
         <p>Weather: ${data.weather}</p>
         <p>Humidity: ${data.humidity}%</p>
-        <p>Wind Speed: ${data.windSpeed}MPH</p>
+        <p>Wind Speed: ${data.windSpeed} MPH</p>
     `;
     searchResults.style.color = "#333";
 }
