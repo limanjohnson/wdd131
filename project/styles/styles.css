@@ -1,29 +1,23 @@
-/* ============================================= */
-/* ================ GENERAL RESET ============== */
-/* ============================================= */
-
-/* CSS Reset */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Typography Defaults */
 html {
-    font-size: 16px; /* Sets the root font size */
-    font-family: 'Arial', sans-serif; /* Default font */
+    font-size: clamp(14px, 1vw, 18px);
+    font-family: 'Arial', sans-serif;
 }
 
 body {
     line-height: 1.6;
     background-color: var(--background);
-    color: #333; /* Default text color */
+    color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 0;
-    padding-bottom: 5rem; /* Ensures space for the bottom nav */
+    padding-bottom: 5rem;
 }
 
 /* Variables */
@@ -35,49 +29,36 @@ body {
     --highlight-color: #fffacd;
 }
 
-/* ============================================= */
-/* ================ LAYOUT SECTIONS ============ */
-/* ============================================= */
-
-/* Header Section */
+/* Layout Sections */
 header {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem 2rem;
     position: fixed;
     bottom: 0;
-    left: 0;
     width: 100%;
+    z-index: 1000; /* Add a high z-index to bring it above other elements */
 }
 
 header .bottom-nav {
-    height: 5rem; /* Fixed navigation height */
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    height: 5rem;
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    padding: 1rem;
     background-color: #fff;
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
-    justify-content: space-around;
-    flex-direction: row;
 }
 
 header .bottom-nav a {
     background-color: #333;
-    color:#fff;
+    color: #fff;
     width: 5rem;
-    height:5rem;
+    height: 5rem;
     border: 2px solid white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-/* Main Section */
 
 main {
     padding: 2rem;
@@ -86,7 +67,6 @@ main {
     flex: 1;
 }
 
-/* Footer Section */
 footer {
     background-color: #333;
     color: #fff;
@@ -94,11 +74,7 @@ footer {
     padding: 1.5rem 0;
 }
 
-/* ============================================= */
-/* ================ COMPONENT STYLES =========== */
-/* ============================================= */
-
-/* Navigation */
+/* Component Styles */
 nav {
     display: flex;
     gap: 1rem;
@@ -115,7 +91,6 @@ nav a:hover {
     background-color: #ddd;
 }
 
-/* Buttons */
 button {
     padding: 0.5rem 1rem;
     background-color: #007bff;
@@ -130,182 +105,52 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Search bar */
-input#search-bar {
-    height: 44px;
-}
-
 .search-container {
     display: flex;
     flex-direction: column;
-    margin: 2em 0 0 0;
+    margin: 2em 0 0;
 }
 
-button#search-button {
-    margin: 2em 0 0 0;
+#search-bar, button#search-button {
     height: 44px;
 }
 
-/* Search Results */
 #search-results {
     margin-top: 2rem;
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #f9f9f9;
-    color: #333;
 }
 
 #search-results p {
     margin: 0.5rem 0;
 }
 
+/* History */
+li {
+    list-style: none;
+    margin: 1em 0;
+    border: 1px solid #333;
+    padding: 1em;
+}
+
 /* Blog Posts Layout */
-
 .blog-posts {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
-    gap: 1rem; /* Add spacing between the grid items */
-}
-
-.blog-posts > * {
-    aspect-ratio: 1 / 1; /* Makes each grid cell a perfect square */
-    width: 100%; /* Ensures cells stretch across the available grid space */
-}
-
-.paris-heading {
-    position: absolute;
-    top: 50%; /* Center the heading vertically */
-    left: 50%; /* Center the heading horizontally */
-    transform: translate(-50%, -50%); /* Adjust for the natural offset of the text */
-    color: white; /* Change this to match your design (e.g., white for visibility) */
-    font-size: 1.5rem; /* Adjust font size as needed */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add a shadow for better readability */
-    z-index: 2; /* Ensure text appears above the image */
-}
-
-.paris-image {
-    width: 100%; /* Make the image fill its container width */
-    height: 100%; /* Make the image fill its container height */
-    object-fit: cover; /* Scale the image */
-    position: absolute; /* Position it in the container */
-    top: 0;
-    left: 0;
-    z-index: 1; /* Ensure it's behind the heading */
-}
-
-/* ============================================= */
-/* ================== UTILITIES ================ */
-/* ============================================= */
-
-/* Flex Utilities */
-.flex {
-    display: flex;
-}
-
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Grid Utilities */
-.blog-posts {
-    display: grid;
-    grid-template: 15em 15em 15em / auto auto;
+    grid-template-columns: repeat(2, 20em);
+    gap: 1rem;
     margin: 0 auto;
     max-width: 800px;
 }
 
+.blog-posts > * {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+}
+
 .blog-posts h2 {
     padding: 2em;
-}
-
-.blog-posts .paris {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-.paris-container {
-    position: relative;
-    grid-column: 1 / 2; /* Places the container in the desired grid cell */
-    grid-row: 1 / 2;
-    width: 100%; /* Ensure it fills the grid cell */
-    height: 100%;
-}
-
-.dubai-container {
-    position: relative;
-    grid-column: 2 / 3; /* Adjust column position */
-    grid-row: 1 / 2; /* Adjust row position */
-    width: 100%; /* Ensure it fills the grid cell */
-    height: 100%;
-}
-
-.dubai-heading {
-    position: absolute;
-    top: 50%; /* Center the heading vertically */
-    left: 50%; /* Center the heading horizontally */
-    transform: translate(-50%, -50%); /* Adjust for the text offset */
-    color: white; /* Change as needed */
-    font-size: 1.5rem; /* Adjust font size */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
-    z-index: 2; /* Ensure text is above the image */
-}
-
-.dubai-image {
-    width: 100%; /* Fill the grid cell */
-    height: 100%; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the image scales properly without distortion */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; /* Place the image behind the header text */
-}
-
-/* Rome */
-.rome-container {
-    position: relative;
-    grid-column: 1 / 2; /* Adjust column position */
-    grid-row: 2 / 3; /* Adjust row position */
-    width: 100%; /* Ensure it fills the grid cell */
-    height: 100%;
-}
-
-.rome-heading {
-    position: absolute;
-    top: 50%; /* Center the heading vertically */
-    left: 50%; /* Center the heading horizontally */
-    transform: translate(-50%, -50%); /* Offset to center */
-    color: white; /* Makes the text visible */
-    font-size: 1.5rem; /* Adjust as needed */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add readability shadow */
-    z-index: 2;
-}
-
-.rome-image {
-    width: 100%; /* Fill the grid cell */
-    height: 100%; /* Maintain aspect ratio */
-    object-fit: cover; /* Scale properly */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; /* Ensure image is behind heading */
-}
-
-/* Bangkok */
-.bangkok-container {
-    position: relative;
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    width: 100%;
-    height: 100%;
-}
-
-.bangkok-heading {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -316,79 +161,36 @@ button#search-button {
     z-index: 2;
 }
 
-.bangkok-image {
+.blog-posts img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
 }
 
-/* Tokyo */
-.tokyo-container {
+.blog-posts .paris-container,
+.blog-posts .dubai-container,
+.blog-posts .rome-container,
+.blog-posts .bangkok-container,
+.blog-posts .tokyo-container,
+.blog-posts .london-container {
     position: relative;
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-    width: 100%;
     height: 100%;
 }
 
-.tokyo-heading {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 1.5rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    z-index: 2;
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .blog-posts {
+        grid-template-columns: 1fr; /* Switch to single column */
+    }
 }
 
-.tokyo-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+@media (min-width: 768px) {
+    ul#history-list {
+        display: grid;
+        grid-template-columns: repeat(2, 5em);
+        gap: 1em;
+    }
 }
-
-/* London */
-.london-container {
-    position: relative;
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
-    width: 100%;
-    height: 100%;
-}
-
-.london-heading {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 1.5rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    z-index: 2;
-}
-
-.london-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-
-/* ============================================= */
-/* ================ RESPONSIVE STYLES ========== */
-/* ============================================= */
-
-/* Media query for mobile devices */
