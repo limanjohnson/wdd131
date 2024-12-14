@@ -19,6 +19,11 @@ body {
     line-height: 1.6;
     background-color: var(--background);
     color: #333; /* Default text color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding-bottom: 5rem; /* Ensures space for the bottom nav */
 }
 
 /* Variables */
@@ -46,6 +51,11 @@ header {
 }
 
 header .bottom-nav {
+    height: 5rem; /* Fixed navigation height */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     align-items: center;
     padding: 1rem;
@@ -68,8 +78,12 @@ header .bottom-nav a {
 }
 
 /* Main Section */
+
 main {
     padding: 2rem;
+    margin: 0 auto;
+    max-width: 800px;
+    flex: 1;
 }
 
 /* Footer Section */
@@ -146,6 +160,40 @@ button#search-button {
     margin: 0.5rem 0;
 }
 
+/* Blog Posts Layout */
+
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
+    gap: 1rem; /* Add spacing between the grid items */
+}
+
+.blog-posts > * {
+    aspect-ratio: 1 / 1; /* Makes each grid cell a perfect square */
+    width: 100%; /* Ensures cells stretch across the available grid space */
+}
+
+.paris-heading {
+    position: absolute;
+    top: 50%; /* Center the heading vertically */
+    left: 50%; /* Center the heading horizontally */
+    transform: translate(-50%, -50%); /* Adjust for the natural offset of the text */
+    color: white; /* Change this to match your design (e.g., white for visibility) */
+    font-size: 1.5rem; /* Adjust font size as needed */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add a shadow for better readability */
+    z-index: 2; /* Ensure text appears above the image */
+}
+
+.paris-image {
+    width: 100%; /* Make the image fill its container width */
+    height: 100%; /* Make the image fill its container height */
+    object-fit: cover; /* Scale the image */
+    position: absolute; /* Position it in the container */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Ensure it's behind the heading */
+}
+
 /* ============================================= */
 /* ================== UTILITIES ================ */
 /* ============================================= */
@@ -160,6 +208,184 @@ button#search-button {
     justify-content: center;
     align-items: center;
 }
+
+/* Grid Utilities */
+.blog-posts {
+    display: grid;
+    grid-template: 15em 15em 15em / auto auto;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.blog-posts h2 {
+    padding: 2em;
+}
+
+.blog-posts .paris {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.paris-container {
+    position: relative;
+    grid-column: 1 / 2; /* Places the container in the desired grid cell */
+    grid-row: 1 / 2;
+    width: 100%; /* Ensure it fills the grid cell */
+    height: 100%;
+}
+
+.dubai-container {
+    position: relative;
+    grid-column: 2 / 3; /* Adjust column position */
+    grid-row: 1 / 2; /* Adjust row position */
+    width: 100%; /* Ensure it fills the grid cell */
+    height: 100%;
+}
+
+.dubai-heading {
+    position: absolute;
+    top: 50%; /* Center the heading vertically */
+    left: 50%; /* Center the heading horizontally */
+    transform: translate(-50%, -50%); /* Adjust for the text offset */
+    color: white; /* Change as needed */
+    font-size: 1.5rem; /* Adjust font size */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
+    z-index: 2; /* Ensure text is above the image */
+}
+
+.dubai-image {
+    width: 100%; /* Fill the grid cell */
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image scales properly without distortion */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Place the image behind the header text */
+}
+
+/* Rome */
+.rome-container {
+    position: relative;
+    grid-column: 1 / 2; /* Adjust column position */
+    grid-row: 2 / 3; /* Adjust row position */
+    width: 100%; /* Ensure it fills the grid cell */
+    height: 100%;
+}
+
+.rome-heading {
+    position: absolute;
+    top: 50%; /* Center the heading vertically */
+    left: 50%; /* Center the heading horizontally */
+    transform: translate(-50%, -50%); /* Offset to center */
+    color: white; /* Makes the text visible */
+    font-size: 1.5rem; /* Adjust as needed */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add readability shadow */
+    z-index: 2;
+}
+
+.rome-image {
+    width: 100%; /* Fill the grid cell */
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover; /* Scale properly */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Ensure image is behind heading */
+}
+
+/* Bangkok */
+.bangkok-container {
+    position: relative;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    width: 100%;
+    height: 100%;
+}
+
+.bangkok-heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+.bangkok-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Tokyo */
+.tokyo-container {
+    position: relative;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    width: 100%;
+    height: 100%;
+}
+
+.tokyo-heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+.tokyo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* London */
+.london-container {
+    position: relative;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    width: 100%;
+    height: 100%;
+}
+
+.london-heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+.london-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
 
 /* ============================================= */
 /* ================ RESPONSIVE STYLES ========== */

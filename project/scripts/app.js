@@ -37,9 +37,17 @@ function displayWeather(data) {
 
 // Save user searches to LocalStorage
 function saveToLocalStorage(data) {
+    // Retrieve search history or initialize an empty array
     let history = JSON.parse(localStorage.getItem('searchHistory') || '[]');
+
+    // Add if city is not already in history
     if (!history.some(entry => entry.city === data.city)) {
         history.push(data);
+
+        // Only keep the latest 10 entries
+        if (history.length > 10) history.shift();
+
+        // Save back to localStorage
         localStorage.setItem('searchHistory', JSON.stringify(history));
     }
 }
@@ -60,13 +68,3 @@ searchButton.addEventListener('click', () => {
         displayError('Please enter a location');
     }
 })
-
-// Add a loading message while after users begins search
-function setLoading(isLoading) {
-    if (isLoading) {
-        searchResults.innerHTML = `<p>Loading...</p>`;
-        searchResults.style.color = "#333";
-    } else {
-        searchResults.innerHTML = ''; // clear loading messages upon result load
-    }
-}
