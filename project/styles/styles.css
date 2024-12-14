@@ -113,6 +113,7 @@ button:hover {
 
 #search-bar, button#search-button {
     height: 44px;
+    margin-top: 1em;
 }
 
 #search-results {
@@ -190,7 +191,7 @@ li {
 @media (min-width: 768px) {
     ul#history-list {
         display: grid;
-        grid-template-columns: repeat(2, 5em);
+        grid-template-columns: repeat(2, 20em);
         gap: 1em;
     }
 }
