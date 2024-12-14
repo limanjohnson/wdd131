@@ -10,7 +10,7 @@ function loadHistory() {
         // If there is search history, map and display it as <li> elements
         historyList.innerHTML = history.map(entry => `
             <li>
-                <h3>${entry.city}, ${entry.country}</h3>
+                <h2>${entry.city}, ${entry.country}</h2>
                 <p>Temperature: ${entry.temperature}°F</p>
                 <p>Weather: ${entry.weather}</p>
                 <p>Humidity: ${entry.humidity}%</p>
