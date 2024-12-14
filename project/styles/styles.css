@@ -100,7 +100,7 @@ nav a:hover {
 }
 
 main div h1 {
-    max-width:1200px;
+    max-width:800px;
     margin: 0 auto;
 }
 
@@ -122,7 +122,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 800px;
 }
 
 #search-bar, button#search-button {
@@ -141,6 +141,10 @@ button:hover {
 
 #search-results p {
     margin: 0.5rem 0;
+}
+
+.fa-cloud {
+    color: var(--highlight-color);
 }
 
 /* History */
@@ -210,5 +214,6 @@ li {
         display: grid;
         grid-template-columns: repeat(2, 20em);
         gap: 1em;
+        justify-content: center;
     }
 }
