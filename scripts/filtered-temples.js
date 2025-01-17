@@ -167,7 +167,7 @@ homeButton.addEventListener("click", () => {
 createTempleCard(temples);
 
 function createTempleCard(filteredTemples) {
-    const templeCards = document.querySelector("#temple-project-images");
+    const templeCards = document.querySelector("#temple-images");
     templeCards.innerHTML = "";
     
     filteredTemples.forEach(temple => {
